@@ -1,13 +1,20 @@
 @import "tailwindcss";
 
 @theme { 
-    --color-background-white: oklch(1 0 159);
-    --color-card-grey: oklch(0.6853 0 159);
-    --color-primary-text-black: oklch(0 0 159);
-    --color-secondary-text-grey: oklch(0.3416 0 159);
-    --color-border: oklch(0.8535 0 0);
+    --color-page: oklch(1 0 159); /* white */
+    --color-card: oklch(0.96 0 159); /* grey */
+    --color-ink: oklch(0 0 159); /* black */
+    --color-muted-ink: oklch(0.46 0 159); /* dark grey */
+    --color-border: oklch(0.8535 0 0); /* light-grey */
+    --color-copyright: oklch(0.8535 0 0);
 
     --font-serif: var(--font-crimson), serif;
     --font-sans: "Abel", sans-serif;
-    --font-mono: Courier, "GT Pressura Mono", monospace; 
+    --font-mono: Courier, monospace; 
+
+    --animate-blink: blink 1s steps(2, start) infinite;
+
+    @keyframes blink {
+        to { visibility: hidden; }
+    }
 }
