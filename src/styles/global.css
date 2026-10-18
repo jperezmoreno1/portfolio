@@ -6,8 +6,15 @@
     --color-ink: oklch(0 0 159); /* black */
     --color-muted-ink: oklch(0.46 0 159); /* dark grey */
     --color-border: oklch(0.8535 0 0); /* light-grey */
+    --color-copyright: oklch(0.8535 0 0);
 
     --font-serif: var(--font-crimson), serif;
     --font-sans: "Abel", sans-serif;
     --font-mono: Courier, monospace; 
+
+    --animate-blink: blink 1s steps(2, start) infinite;
+
+    @keyframes blink {
+        to { visibility: hidden; }
+    }
 }
