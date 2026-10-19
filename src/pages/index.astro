@@ -1,7 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects')
+projects.sort( (a, b) => a.data.order - b.data.order );
 ---
 
-<BaseLayout title="Jose Moreno - Full Stack Developer">
-	
+<BaseLayout title="Jose Moreno - Full Stack Engineer">
+	<ul>
+        { projects.map(project => (
+            <li>{project.data.title}, {project.data.tech}</li> 
+        ))}
+    </ul>
 </BaseLayout>
