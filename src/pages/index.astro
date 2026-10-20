@@ -1,15 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-
-const projects = await getCollection('projects')
-projects.sort( (a, b) => a.data.order - b.data.order );
+import IntroCard from '../components/cards/IntroCard.astro';
+import PortraitCard from '../components/cards/PortraitCard.astro';
+import ExperienceCard from '../components/cards/ExperienceCard.astro';
+import ProjectsCard from '../components/cards/ProjectsCard.astro';
+import ContactCard from '../components/cards/ContactCard.astro';
+import GuestbookCard from '../components/cards/GuestbookCard.astro';
 ---
 
 <BaseLayout title="Jose Moreno - Full Stack Engineer">
-	<ul>
-        { projects.map(project => (
-            <li>{project.data.title}, {project.data.tech}</li> 
-        ))}
-    </ul>
+	<div class="grid grid-cols-1 md:grid-cols-[2fr_28rem] gap-4 pt-6 pb-5">
+        <IntroCard />
+        <PortraitCard />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <ExperienceCard />
+        <ProjectsCard />
+        <ContactCard />
+        <GuestbookCard />
+    </div>
 </BaseLayout>
