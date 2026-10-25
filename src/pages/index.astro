@@ -1,7 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import IntroCard from '../components/cards/IntroCard.astro';
+import PortraitCard from '../components/cards/PortraitCard.astro';
+import ExperienceCard from '../components/cards/ExperienceCard.astro';
+import ProjectsCard from '../components/cards/ProjectsCard.astro';
+import ContactCard from '../components/cards/ContactCard.astro';
+import GuestbookCard from '../components/cards/GuestbookCard.astro';
 ---
 
-<BaseLayout title="Jose Moreno - Full Stack Developer">
-	
+<BaseLayout title="Jose Moreno - Full Stack Engineer">
+	<div class="grid grid-cols-1 md:grid-cols-[2fr_28rem] gap-4 pt-6 pb-5">
+        <IntroCard />
+        <PortraitCard />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+        <ExperienceCard />
+        <ProjectsCard />
+        <ContactCard />
+        <GuestbookCard />
+    </div>
 </BaseLayout>
