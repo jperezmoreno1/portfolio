@@ -1,6 +1,6 @@
 ---
 title: "BestLinePicker"
-description: "Sports odds comparison web app that helps users compare live sportsbook lines across supported leagues. The app shows available games, sportsbook odds, best-line highlights, payout calculations, snapshot history, and tracked lines."
+description: "Sports odds comparison app for finding the best lines, calculating payouts, and tracking odds across sportsbooks."
 tech: ["Next.js", "Typescript", "Django", "Firestore/Firebase"]
 repo: "https://github.com/jperezmoreno1/BestLinePicker"
 featured: true
