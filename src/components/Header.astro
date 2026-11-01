@@ -2,15 +2,16 @@
 
 ---
 
-<header id="navbar-container">
-    <div id="header-wrapper" class="max-w-4/5 mx-auto px-6 py-6 flex justify-between sticky">
+<header id="navbar-container" class="sticky top-0 bg-page z-50">
+    <div id="header-wrapper" class="max-w-5/6 mx-auto px-6 py-6 flex justify-between">
+        <div id="navbar-fade" class="absolute inset-x-0 h-3 bg-linear-to-b from-page to-transparent top-full"></div>
         <a href="/" class="font-mono text-lg text-ink">josemoreno@home:~$ <span aria-hidden="true" class="motion-safe:animate-blink"> █ </span> </a>
 
         <nav aria-label="Main" class="font-serif text-xl text-ink">
-            <ul class="flex gap-6">
+            <ul class="flex gap-6 text-muted-ink">
                 <li> <a href="/projects">Projects</a> </li>
                 <li aria-hidden="true">/</li>
-                <li>CV</li> <!-- TODO: SET UP DOWNLOAD CV -->
+                <li><a href={`${import.meta.env.BASE_URL}cv.pdf`} download aria-label="Download CV">CV</a></li>
             </ul>
         </nav>
     </div>
