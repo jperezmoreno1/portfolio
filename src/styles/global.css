@@ -2,10 +2,10 @@
 
 @theme { 
     --color-page: oklch(1 0 159); /* white */
-    --color-card: oklch(0.96 0 159); /* grey */
+    --color-card: oklch(98.5% 0 0); /* grey */
     --color-ink: oklch(0 0 159); /* black */
-    --color-muted-ink: oklch(0.46 0 159); /* dark grey */
-    --color-border: oklch(0.8535 0 0); /* light-grey */
+    --color-muted-ink: oklch(70.8% 0 0); /* dark grey */
+    --color-border: oklch(92.2% 0 0); /* light-grey */
     --color-copyright: oklch(0.8535 0 0);
 
     --font-serif: var(--font-crimson), serif;
