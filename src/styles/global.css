@@ -18,3 +18,15 @@
         to { visibility: hidden; }
     }
 }
+
+@utility page-padding {
+    @apply px-6 md:px-12; 
+}
+
+@utility contact-group-hover {
+    @apply transition duration-300 hover:opacity-100 group-hover:opacity-35;
+}
+
+@utility header-li-hover {
+    @apply transition duration-300 hover:text-ink;
+}
