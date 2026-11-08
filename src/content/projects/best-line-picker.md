@@ -5,4 +5,5 @@ tech: ["Next.js", "Typescript", "Django", "Firestore/Firebase"]
 repo: "https://github.com/jperezmoreno1/BestLinePicker"
 featured: true
 order: 1
+showcase: ../../assets/best-line.png
 ---

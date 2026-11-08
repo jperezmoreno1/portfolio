@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import '../styles/global.css'
+
+import Card from '../components/Card.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectsSummary from '../components/ProjectsSummary.astro';
+
+const projects = await getCollection('projects');
+const sortedProjects = projects.sort( (a, b) => a.data.order - b.data.order ).filter( project => project.data.featured === true );
+---
+
+<BaseLayout title="Jose Moreno - Projects" description="Page of Jose Moreno's projects">
+    <div id="page-wrapper">
+        <div id="projects-intro" class="mt-6">
+            <h1 class="text-ink font-serif text-4xl">Projects.</h1>
+            <p class="text-muted-ink font-sans text-base mt-4">Things I've built & what's to come.</p>
+        </div>
+
+        <div id="projects-page" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            <Card>
+                <div>
+                    <p class="flex justify-between text-muted-ink text-base">
+                        {sortedProjects[0].data.title}
+                        <span>2026</span>
+                    </p>
+                </div>
+            </Card>
+
+            <Card>
+                <div>
+                    <p class="flex justify-between text-muted-ink text-base">
+                        {sortedProjects[1].data.title}
+                        <span>2026</span>
+                    </p>
+                </div>
+            </Card>
+        </div>
+    </div>
+</BaseLayout>
