@@ -9,7 +9,7 @@
     --color-copyright: oklch(0.8535 0 0);
 
     --font-serif: var(--font-crimson), serif;
-    --font-sans: "Abel", sans-serif;
+    --font-sans: sans-serif;
     --font-mono: Courier, monospace; 
 
     --animate-blink: blink 1s steps(2, start) infinite;

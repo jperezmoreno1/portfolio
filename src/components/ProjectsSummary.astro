@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from "astro:content";
+interface Props { project: CollectionEntry<"projects"> };
+const { project } = Astro.props;
+const { title, description, tech, repo, url } = project.data;
+---
+
+<div class="project-summary-wrapper" class="bg-page"> 
+    <div>
+        <article>
+            <div>
+                <h2><a href="/projects/{id}">{project.data.title}</a></h2>
+                <p>{project.data.description}</p>
+                <p>Built with: {project.data.tech.join(", ")}</p>
+            </div>
+        </article>
+    </div>
+</div>
