@@ -30,3 +30,7 @@
 @utility header-li-hover {
     @apply transition duration-300 hover:text-ink;
 }
+
+html {
+    font-size: 79%;
+}
