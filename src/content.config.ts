@@ -12,7 +12,7 @@ const projects = defineCollection({
         repo: z.url().optional(),
         featured: z.boolean().default(false),
         order: z.int(),
-        showcase: image().optional(),
+        showcase: image(),
     }),
 });
 

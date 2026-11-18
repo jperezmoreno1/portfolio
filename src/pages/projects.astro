@@ -19,24 +19,22 @@ const sortedProjects = projects.sort( (a, b) => a.data.order - b.data.order ).fi
         </div>
 
         <div id="projects-page" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-            <Card>
-                <div>
-                    <p class="flex justify-between text-muted-ink text-base">
-                        {sortedProjects[0].data.title}
-                        <span>2026</span>
-                    </p>
-                    <Image src={sortedProjects[0].data.showcase} alt={'Showcase image for ' + sortedProjects[0].data.title}></Image>
-                </div>
-            </Card>
+            {
+                sortedProjects.map( (project) => (
+                    <Card className="border">
+                        <div>
+                            <p class="flex justify-between font-sans text-sm text-muted-ink">
+                                {project.data.title}
+                                <span>2026</span>
+                            </p>
+                        </div>
 
-            <Card>
-                <div>
-                    <p class="flex justify-between text-muted-ink text-base">
-                        {sortedProjects[1].data.title}
-                        <span>2026</span>
-                    </p>
-                </div>
-            </Card>
+                        <div class="mt-4 border rounded-xl">
+                            <Image src={project.data.showcase} alt={'Showcase image for ${project.data.title}'} class="mx-auto h-auto"/>
+                        </div>
+                    </Card>
+                ))
+            }
         </div>
     </div>
 </BaseLayout>
