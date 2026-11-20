@@ -45,6 +45,10 @@
     @apply max-w-full 2xl:max-w-5/6;
 }
 
+@utility pages-intro {
+    @apply ;
+}
+
 html {
     font-size: 79%;
 }
