@@ -21,7 +21,7 @@ const sortedProjects = projects.sort( (a, b) => a.data.order - b.data.order ).fi
         <div id="projects-page" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 mb-12">
             {
                 sortedProjects.map( (project) => (
-                    <Card className="border">
+                    <Card className="relative overflow-hidden h-[420px] group">
                         <div>
                             <p class="flex justify-between font-sans text-sm text-muted-ink">
                                 {project.data.title}
@@ -29,8 +29,14 @@ const sortedProjects = projects.sort( (a, b) => a.data.order - b.data.order ).fi
                             </p>
                         </div>
 
-                        <div class="mt-4 border rounded-xl">
-                            <Image src={project.data.showcase} alt={'Showcase image for ${project.data.title}'} class="mx-auto h-auto"/>
+                        <div id="showcase-description" class="grid grid-rows-[0fr] hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out group-hover:grid-rows-[1fr]">
+                            <div class="overflow-hidden min-h-0">
+                                <p class="font-sans text-sm text-ink opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 mt-4 mb-2">{project.data.description}</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 mx-auto h-auto rounded-xl justify-center items-center relative shadow-xl">
+                            <Image src={project.data.showcase} alt={'Showcase image for ${project.data.title}'} class="shadow-xl w-full h-auto absolute overflow-hidden"/>
                         </div>
                     </Card>
                 ))
