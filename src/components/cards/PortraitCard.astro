@@ -1,10 +1,10 @@
 ---
 import { Image } from 'astro:assets';
-import portrait from '../../assets/portrait.jpg';
+import jose from '../../../public/jose.gif';
 import Card from '../Card.astro';
 ---
 
-<Card className="aspect-square p-0! overflow-hidden">
-    <Image src={portrait} alt="Jose Moreno smiling on the field following a Yankees-Angels baseball game."
-    class="w-full h-full object-cover!"/>
+<Card className="aspect-square p-0! overflow-hidden max-w-[350px]">
+    <Image src={jose} alt="Jose Moreno smiling on the field following a Yankees-Angels baseball game."
+    class="w-full h-full object-cover! [image-rendering:pixelated]"/>
 </Card>
