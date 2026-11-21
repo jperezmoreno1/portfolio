@@ -14,14 +14,14 @@ const sortedProjects = projects.sort( (a, b) => a.data.order - b.data.order ).fi
 <BaseLayout title="Jose Moreno - Projects" description="Page of Jose Moreno's projects">
     <div id="page-wrapper">
         <div id="projects-intro" class="mt-6">
-            <h1 class="text-ink font-serif text-7xl">Projects.</h1>
+            <h1 class="text-ink font-serif text-8xl">Projects.</h1>
             <p class="text-muted-ink font-sans text-xl mt-4">Things I've built & what's to come.</p>
         </div>
 
         <div id="projects-page" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 mb-12">
             {
                 sortedProjects.map( (project) => (
-                    <Card className="relative overflow-hidden h-[420px] group">
+                    <Card className="relative overflow-hidden h-[420px] w-full group">
                         <div>
                             <p class="flex justify-between font-sans text-sm text-muted-ink">
                                 {project.data.title}
@@ -31,7 +31,9 @@ const sortedProjects = projects.sort( (a, b) => a.data.order - b.data.order ).fi
 
                         <div id="showcase-description" class="grid grid-rows-[0fr] hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out group-hover:grid-rows-[1fr]">
                             <div class="overflow-hidden min-h-0">
-                                <p class="font-sans text-sm text-ink opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 mt-4 mb-2">{project.data.description}</p>
+                                <p class="font-sans text-sm text-showcase-description opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 mt-4 mb-2">
+                                    {project.data.description}
+                                </p>
                             </div>
                         </div>
 
